@@ -36,12 +36,26 @@ public class UI : MonoBehaviour
     public float daño = 10f;
 
     public GameObject esfera;
+    public GameObject cilindro;
+    public GameObject cubo;
 
+    public Button boton;
+    public Coroutine colorCoroutine;
     public void Esfera()
     {
         esfera.transform.localScale += Vector3.one;
     }
-   public void OnPart()
+
+
+    public void Cubo()
+    {
+        cubo.transform.localScale += Vector3.one;
+    }
+    public void Cili()
+    {
+        cilindro.transform.localScale += Vector3.one;
+    }
+    public void OnPart()
     {
         part.Play();
     }
@@ -61,8 +75,26 @@ public class UI : MonoBehaviour
         slider.onValueChanged.AddListener(Image2);
         slider2.onValueChanged.AddListener(Trans);
 
+        boton = GetComponent<Button>();
+        boton.onClick.AddListener(OnClick);
+        colorCoroutine = StartCoroutine(Coloor());
+
     }
 
+    IEnumerator Coloor()
+    {
+        while (true)
+        {
+            Color newColor = new Color(Random.value, Random.value, Random.value);
+            boton.image.color = newColor;
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public void OnClick()
+    {
+        StopCoroutine(colorCoroutine);
+    }
     void PerderVida()
     {
         vidaTotal -= daño;
