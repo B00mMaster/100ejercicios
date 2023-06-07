@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class veinticinco : MonoBehaviour
+{
+    public Color color()
+    {
+        float r = Random.Range(0f, 1f);
+        float g = Random.Range(0f, 1f);
+        float b = Random.Range(0f, 1f);
+        float a = Random.Range(0f, 1f);
+
+        return new Color(r, g, b, a);
+    }
+}
