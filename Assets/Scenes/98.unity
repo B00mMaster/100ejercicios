@@ -540,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474774999}
   - component: {fileID: 1474774998}
+  - component: {fileID: 1474775000}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Coin
@@ -575,6 +576,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -3.211, z: 0}
+--- !u!114 &1474775000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474774997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3d578580d3a1f4cace98598d6594c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1941878742}
 --- !u!1 &1941878737
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +602,6 @@ GameObject:
   - component: {fileID: 1941878739}
   - component: {fileID: 1941878738}
   - component: {fileID: 1941878742}
-  - component: {fileID: 1941878743}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -694,15 +707,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1941878743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941878737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3d578580d3a1f4cace98598d6594c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
